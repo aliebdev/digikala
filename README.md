@@ -8,6 +8,7 @@ Follow my social media for more.
 ## Learn
 - ✅ Reusable Widgets
 - ✅ Typography in Flutter
+- ✅ Custom Text Theme
 - ✅ Custom Gridviews
 - ✅ Auto Scroll Slider
 - ✅ Custom Page indicator
