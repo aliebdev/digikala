@@ -18,7 +18,8 @@ class DigiAppsWidget extends StatelessWidget {
       ),
       itemCount: DigiAppsModel.items.length + 1,
       itemBuilder: (BuildContext context, int index) {
-        final app = DigiAppsModel.items[index == 0 ? 0 : index - 1];
+        final app = DigiAppsModel
+            .items[index == DigiAppsModel.items.length ? index - 1 : index];
         return index == DigiAppsModel.items.length
             ? Column(
                 children: [
