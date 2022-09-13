@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/offer_model.dart';
+import '../../../models/product_model.dart';
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_spacings.dart';
 
@@ -27,12 +27,12 @@ class OffersWidget extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: List.generate(
-            OfferModel.items.length + 2,
+            ProductModel.items.length + 2,
             (index) {
-              final offer = OfferModel.items[index < 3 ? index : index - 2];
+              final offer = ProductModel.items[index < 3 ? index : index - 2];
               return index == 0
                   ? FirstOfferTile(size: size)
-                  : index == OfferModel.items.length + 1
+                  : index == ProductModel.items.length + 1
                       ? Container(
                           padding: const EdgeInsets.all(AppSpacings.l),
                           margin: const EdgeInsets.only(
@@ -131,7 +131,7 @@ class OfferTile extends StatelessWidget {
     required this.offer,
   }) : super(key: key);
 
-  final OfferModel offer;
+  final ProductModel offer;
 
   @override
   Widget build(BuildContext context) {
@@ -166,7 +166,7 @@ class OfferTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: AppSpacings.l),
-          if (offer.isAvailabel)
+          if (offer.isAvailable)
             Row(
               children: [
                 const Icon(

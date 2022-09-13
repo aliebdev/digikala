@@ -1,6 +1,7 @@
-import 'package:digikala/screens/home/category/category_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../category/category_screen.dart';
+import '../cart/cart_screen.dart';
 import '../home/home_screen.dart';
 import 'widgets/custom_bottom_navigation_bar.dart';
 
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         children: const [
           HomeScreen(),
           CategoryScreen(),
-          Scaffold(),
+          CartScreen(),
           Scaffold(),
           Scaffold(),
         ],

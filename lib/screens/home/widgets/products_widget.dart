@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/offer_model.dart';
+import '../../../models/product_model.dart';
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_spacings.dart';
 
@@ -31,9 +31,9 @@ class ProductsWidget extends StatelessWidget {
                 crossAxisSpacing: 1,
                 childAspectRatio: .78,
               ),
-              itemCount: OfferModel.items.length,
+              itemCount: ProductModel.items.length,
               itemBuilder: (BuildContext context, int index) {
-                final offer = OfferModel.items[index];
+                final offer = ProductModel.items[index];
                 return ProductTile(offer: offer);
               },
             ),
@@ -47,7 +47,7 @@ class ProductsWidget extends StatelessWidget {
 class ProductTile extends StatelessWidget {
   const ProductTile({Key? key, required this.offer}) : super(key: key);
 
-  final OfferModel offer;
+  final ProductModel offer;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class ProductTile extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: AppSpacings.l),
-          if (offer.isAvailabel)
+          if (offer.isAvailable)
             Row(
               children: [
                 const Icon(

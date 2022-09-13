@@ -1,5 +1,3 @@
-import 'package:digikala/models/offer_model.dart';
-
 class DigiAppsModel {
   final String title, image;
 
