@@ -4,7 +4,8 @@ import '../../../models/category_model.dart';
 import '../../../theme/app_colors.dart';
 import '../../../theme/app_spacings.dart';
 import '../../../widgets/app_spacer.dart';
-import '../screens/home/widgets/custom_appbar.dart';
+
+import '../home/widgets/custom_appbar.dart';
 import 'widgets/popular_brands_widget.dart';
 
 class CategoryScreen extends StatelessWidget {
